@@ -21,3 +21,8 @@ const incrementString = str => {
 };
 
 console.log(incrementString('foo0009'));
+
+// Smart person answer
+
+let incrementString = str =>
+  str.replace(/([0-8]|\d?9+)?$/, e => (e ? +e + 1 : 1));

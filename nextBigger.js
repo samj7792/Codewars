@@ -42,12 +42,14 @@ const nextBigger = num => {
   let numArr = num.toString();
   console.log(numArr);
 
-  let permutes = permutations(numArr)
-    // .map(x => x.join(''))
-    .filter(x => x > num)
-    .sort();
+  let permutes = Math.min(
+    permutations(numArr)
+      // .map(x => x.join(''))
+      .filter(x => x > num)
+      .sort()
+  );
   console.log(permutes);
-  return parseInt(permutes[0]);
+  return parseInt(permutes);
 };
 
-console.log(nextBigger(1234567890));
+console.log(nextBigger(123456789));

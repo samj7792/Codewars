@@ -16,7 +16,9 @@ const countOddPentaFib = num => {
     );
   }
 
-  fibs = [...new Set(fibs.filter(x => x[x.length - 1] % 2))];
+  // fibs = [...new Set(fibs.filter(x => x[x.length - 1] % 2))];
+  fibs.unshift();
+  fibs.filter(x => x[x.length - 1] % 2);
   console.log(fibs.length);
   return fibs.length + 1;
 };

@@ -1,3 +1,5 @@
+// wave('hello') = ['Hello', 'hEllo', 'heLlo', 'helLo', hellO']
+
 const wave = str => {
   const mex = [];
   for (let i = 0; i < str.length; i++) {
@@ -15,3 +17,10 @@ const wave = str => {
 };
 
 console.log(wave('two words'));
+
+// other solution
+
+var wave = w =>
+  [...w]
+    .map((a, i) => w.slice(0, i) + a.toUpperCase() + w.slice(i + 1))
+    .filter(a => a != w);

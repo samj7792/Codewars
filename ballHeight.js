@@ -1,4 +1,4 @@
-const maxBall = v0 => {
+const maxBall = (v0) => {
   let v = (v0 * 1000) / 3600;
   let h = 0;
   let g = 9.81;
@@ -14,4 +14,4 @@ const maxBall = v0 => {
 
 // from codewars
 
-const maxBall = v => Math.round(v / 3.5316);
+const maxBall = (v) => Math.round(v / 3.5316);
